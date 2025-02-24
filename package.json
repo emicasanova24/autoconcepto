@@ -1,0 +1,24 @@
+{
+  "name": "autoconcepto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch scss/style.scss:css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.85.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emicasanova24/autoconcepto.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emicasanova24/autoconcepto/issues"
+  },
+  "homepage": "https://github.com/emicasanova24/autoconcepto#readme",
+}
