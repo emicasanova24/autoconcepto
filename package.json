@@ -8,7 +8,7 @@
     "sass": "sass --watch scss/style.scss:css/style.css"
   },
   "keywords": [],
-  "author": "",
+  "author": "Emiliano Casanova",
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.85.0"
