@@ -1,0 +1,44 @@
+/* Template Name: Tulsy
+   File Description: Main Css file of the template
+*/
+
+/****************************************
+
+01.variables
+02.general
+03.helper
+04.components
+05.avatar
+06.menu
+07.home
+08.about
+09.features
+10.counter
+11.pricing
+12.contact 
+13.footer
+
+
+*****************************************/
+
+@use "variables";
+@use "general";
+@use "helper";
+@use "components";
+@use "avatar";
+@use "menu";
+@use "home";
+@use "about";
+@use "features";
+@use "cta";
+@use "pricing";
+@use "service";
+@use "team";
+@use "testimonial";
+@use "client";
+@use "faqs";
+@use "portfolio";
+@use "blog";
+@use "footer";
+@use "contact";
+@use "form";
