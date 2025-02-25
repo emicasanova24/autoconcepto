@@ -2093,6 +2093,128 @@ button:focus {
 
 
 *****************************************/
+.container-cards .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  max-width: 100%;
+  height: 330px;
+  background: white;
+  border-radius: 20px;
+  transition: 0.5s;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.container-cards .card:hover {
+  height: 300px;
+}
+
+.container-cards .card .img-box {
+  position: absolute;
+  top: 20px;
+  width: 300px;
+  height: 220px;
+  background: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container-cards .card:hover .img-box {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container-cards .card .img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-cards .card .content {
+  position: absolute;
+  top: 252px;
+  width: 100%;
+  height: 55px;
+  padding: 0 30px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container-cards .card:hover .content {
+  top: 130px;
+  height: 250px;
+}
+
+.container-cards .card .content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr);
+}
+
+.container-cards .card .content p {
+  color: #333;
+}
+
+.container-cards .card .content a {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  padding: 12px 25px;
+  text-decoration: none;
+  background: var(--clr);
+  color: white;
+  font-weight: 500;
+}
+
+.container-cards .card .content a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+  .container-cards .card {
+    width: 230px;
+    border-radius: 15px;
+  }
+  .container-cards .card .img-box {
+    width: 185px;
+    border-radius: 10px;
+  }
+  .container-cards .card .content p {
+    font-size: 0.8rem;
+  }
+  .container-cards .card .content a {
+    font-size: 0.9rem;
+  }
+}
+/* Template Name: Tulsy
+   File Description: Main Css file of the template
+*/
+/****************************************
+
+01.variables
+02.general
+03.helper
+04.components
+05.avatar
+06.menu
+07.home
+08.about
+09.features
+10.counter
+11.pricing
+12.contact 
+13.footer
+
+
+*****************************************/
 .team .agency-team-img img {
   width: 100px;
 }
