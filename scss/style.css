@@ -343,7 +343,6 @@ button:focus {
 }
 
 .btn:focus {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -1003,6 +1002,7 @@ button:focus {
 
 /*------ STARTUP HOME ------*/
 .startup-home {
+  background: url(../images/background/fondo.jpeg);
   background-size: cover;
   background-position: center center;
   height: 100vh;
@@ -2655,7 +2655,8 @@ button:focus {
   border: 1px solid #e9ecef;
 }
 .gym-blog .gym-blog-box .gym-blog-img img {
-  clip-path: polygon(100% 0, 100% 100%, 0 80%, 0% 20%, 0 0);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 80%, 0% 20%, 0 0);
+          clip-path: polygon(100% 0, 100% 100%, 0 80%, 0% 20%, 0 0);
 }
 .gym-blog .gym-blog-box .gym-blog-title {
   color: #323232;
@@ -2956,11 +2957,6 @@ textarea.form-control {
   border-radius: 3px;
 }
 
-/*------ STARTUP CONTACT ------*/
-.startup-map {
-  filter: grayscale(100);
-}
-
 /* Template Name: Tulsy
    File Description: Main Css file of the template
 */
@@ -3000,6 +2996,4 @@ textarea.form-control {
   background-color: rgba(255, 255, 255, 0.4);
   border: transparent;
   color: #ffffff;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

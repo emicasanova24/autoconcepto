@@ -101,6 +101,77 @@ button:focus {
     max-width: 1140px;
   }
 }
+.social-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.social-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Colores de cada red social */
+.social-container a.whatsapp {
+  background: #25D366;
+}
+
+.social-container a.email {
+  background: #ff6b6b;
+}
+
+.social-container a.instagram {
+  background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF);
+}
+
+.social-container a.youtube {
+  background: #FF0000;
+}
+
+/* Efecto Hover */
+.social-container a::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+}
+
+.social-container a:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.social-container a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+  .social-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 /* Template Name: Tulsy
    File Description: Main Css file of the template
 */
@@ -2955,11 +3026,6 @@ textarea.form-control {
   text-align: center;
   color: #ffffff;
   border-radius: 3px;
-}
-
-/*------ STARTUP CONTACT ------*/
-.startup-map {
-  filter: grayscale(100);
 }
 
 /* Template Name: Tulsy
