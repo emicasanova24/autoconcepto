@@ -37,7 +37,7 @@
 }
 
 .bg-overlay {
-  background-color: rgba($dark, 0.7)!important;
+  background: linear-gradient(to bottom, rgba(19, 18, 29, 0.9) 0%, rgba(19, 18, 29, 1) 2%, rgba(19, 18, 29, 0.5) 100%) !important;
   position: absolute;
   top: 0;
   left: 0;

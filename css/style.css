@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Template Name: Tulsy
    File Description: Main Css file of the template
 */
@@ -64,7 +65,7 @@ a {
 }
 
 p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
 }
 
@@ -318,11 +319,11 @@ button:focus {
 }
 
 .text-muted {
-  color: #8b8e92 !important;
+  color: #616469 !important;
 }
 
 .bg-muted {
-  background-color: #8b8e92 !important;
+  background-color: #616469 !important;
 }
 
 .text-white {
@@ -344,7 +345,7 @@ button:focus {
 }
 
 .text-muted {
-  color: #8b8e92 !important;
+  color: #616469 !important;
 }
 
 .home-center {
@@ -358,7 +359,7 @@ button:focus {
 }
 
 .bg-overlay {
-  background-color: rgba(19, 18, 29, 0.7) !important;
+  background: linear-gradient(to bottom, rgba(19, 18, 29, 0.9) 0%, rgb(19, 18, 29) 2%, rgba(19, 18, 29, 0.5) 100%) !important;
   position: absolute;
   top: 0;
   left: 0;
@@ -547,6 +548,11 @@ button:focus {
   background-color: #323232 !important;
 }
 
+.btn-whatsapp-custom {
+  color: #ffffff;
+  background-color: #25d366 !important;
+}
+
 .btn-dark-custom:hover,
 .btn-dark-custom:focus,
 .btn-dark-custom:active,
@@ -556,6 +562,32 @@ button:focus {
 .open > .dropdown-toggle .btn-dark {
   color: #ffffff !important;
   background-color: rgba(50, 50, 50, 0.85) !important;
+}
+
+.icon-services {
+  display: inline-block;
+  width: 40px; /* Ajusta según el tamaño de los PNG */
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Diferentes clases para cada imagen */
+.icon-1 {
+  background-image: url("/images/icons/cabinapintura.png");
+}
+
+.icon-2 {
+  background-image: url("/images/icons/herramientas.png");
+}
+
+.icon-3 {
+  background-image: url("/images/icons/laboratorio.png");
+}
+
+.icon-4 {
+  background-image: url("/images/icons/pulido.png");
 }
 
 /* Template Name: Tulsy
@@ -721,6 +753,13 @@ button:focus {
   }
 }
 @media (max-width: 768px) {
+  .interior-home-content img {
+    max-height: 80px;
+    width: auto;
+  }
+  .interior-home-title {
+    font-size: 15px !important;
+  }
   .navbar-custom {
     padding: 18px 0px;
     background-color: white;
@@ -730,6 +769,7 @@ button:focus {
   }
   .navbar-custom .navbar-brand .logo-dark {
     display: inline-block !important;
+    max-height: 35px;
   }
   .navbar-custom .navbar-brand .logo-light {
     display: none !important;
@@ -1036,7 +1076,7 @@ button:focus {
   font-size: 18px;
 }
 .interior-home .container-fluid .carousel-item .interior-home-title {
-  font-size: 50px;
+  font-size: 30px;
   letter-spacing: 5px;
   text-transform: uppercase;
 }
@@ -1201,7 +1241,7 @@ button:focus {
 *****************************************/
 .about .progress {
   height: 3px;
-  background: rgba(139, 142, 146, 0.1);
+  background: rgba(97, 100, 105, 0.1);
   overflow: visible;
 }
 .about .progress .progress-bar {
@@ -1302,7 +1342,7 @@ button:focus {
   z-index: 3;
 }
 .business-about .business-about-content .business-about-features span {
-  color: #8b8e92;
+  color: #616469;
 }
 .business-about .business-about-content .business-about-features .about-icon {
   height: 22px;
@@ -1344,7 +1384,7 @@ button:focus {
 
 /*------ INTERIOR-ABOUT ------*/
 .about .interior-about-img {
-  box-shadow: 30px 30px 0px 0px rgba(139, 142, 146, 0.1);
+  box-shadow: 30px 30px 0px 0px rgba(97, 100, 105, 0.1);
   margin-bottom: 30px;
 }
 
@@ -1362,7 +1402,7 @@ button:focus {
 /*------ PHOTOGRAPHER-about ------*/
 .progress {
   height: 3px;
-  background: rgba(139, 142, 146, 0.1);
+  background: rgba(97, 100, 105, 0.1);
   overflow: visible;
 }
 .progress .progress-bar {
@@ -1758,11 +1798,11 @@ button:focus {
 *****************************************/
 /*------ App pricing ------*/
 .app-pricing .gym-pricing-box {
-  border: 1px solid rgba(139, 142, 146, 0.1);
+  border: 1px solid rgba(97, 100, 105, 0.1);
   border-radius: 6px 6px 0px 0px;
 }
 .app-pricing .gym-pricing-box .gym-pricing-title {
-  border-bottom: 1px solid rgba(139, 142, 146, 0.1);
+  border-bottom: 1px solid rgba(97, 100, 105, 0.1);
 }
 .app-pricing .gym-pricing-box .gym-pricing-title h4 {
   font-weight: 600;
@@ -1780,7 +1820,7 @@ button:focus {
   bottom: 16px;
 }
 .app-pricing .gym-pricing-box-active {
-  border: 1px solid rgba(139, 142, 146, 0.1);
+  border: 1px solid rgba(97, 100, 105, 0.1);
   border-radius: 6px 6px 0px 0px;
 }
 .app-pricing .gym-pricing-box-active .gym-pricing-title-active {
@@ -1990,7 +2030,7 @@ button:focus {
 }
 
 .book-services-box {
-  border: 1px solid rgba(139, 142, 146, 0.1);
+  border: 1px solid rgba(97, 100, 105, 0.1);
   padding: 30px 16px 30px 16px;
 }
 
@@ -2426,7 +2466,7 @@ button:focus {
   width: 60px;
 }
 .app-testimonial .app-testimonial-brand {
-  color: #8b8e92 !important;
+  color: #616469 !important;
 }
 .app-testimonial .swiper-button {
   display: flex;
@@ -3164,7 +3204,7 @@ button:focus {
   height: 46px;
   z-index: 2;
   font-size: 14px;
-  border: 1px solid rgba(139, 142, 146, 0.1) !important;
+  border: 1px solid #8b8b8b !important;
 }
 .agency-contact .custom-form .form-control:focus {
   border-color: #e9aa39;
@@ -3195,7 +3235,7 @@ textarea.form-control {
   height: 46px;
   z-index: 2;
   font-size: 14px;
-  border: 1px solid rgba(139, 142, 146, 0.2) !important;
+  border: 1px solid rgba(97, 100, 105, 0.2) !important;
 }
 .custom-form .form-control:focus {
   border-color: #e9aa39;

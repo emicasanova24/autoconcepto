@@ -91,6 +91,15 @@
 }
 
 @media (max-width: 768px) { 
+  .interior-home-content  {
+    img  {
+      max-height: 80px;
+      width: auto;
+    }
+  }
+  .interior-home-title {
+    font-size: 15px !important;
+  }
   .navbar-custom {
     padding: 18px 0px;
     background-color: rgba($white, 1);
@@ -98,6 +107,7 @@
       margin-left: 15px;
       .logo-dark {
         display: inline-block !important;
+        max-height: 35px;
       }
       .logo-light {
         display: none !important;

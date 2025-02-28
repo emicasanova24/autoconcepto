@@ -79,6 +79,11 @@
   background-color: #323232 !important;
 }
 
+.btn-whatsapp-custom {
+  color: #ffffff;
+  background-color: #25d366 !important;
+}
+
 .btn-dark-custom:hover,
 .btn-dark-custom:focus,
 .btn-dark-custom:active,
@@ -89,3 +94,19 @@
   color: #ffffff !important;
   background-color: rgba(50, 50, 50, 0.85) !important;
 }
+
+
+.icon-services {
+  display: inline-block;
+  width: 40px; /* Ajusta según el tamaño de los PNG */
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Diferentes clases para cada imagen */
+.icon-1 { background-image: url('/images/icons/cabinapintura.png'); }
+.icon-2 { background-image: url('/images/icons/herramientas.png'); }
+.icon-3 { background-image: url('/images/icons/laboratorio.png'); }
+.icon-4 { background-image: url('/images/icons/pulido.png'); }
