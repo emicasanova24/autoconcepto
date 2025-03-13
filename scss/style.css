@@ -1585,11 +1585,10 @@ button:focus {
 
 *****************************************/
 .cta {
-  background: url(../images/background/bg-3.jpg);
+  background: url(../images/background/hangar.png);
   background-size: cover;
-  background-position: center center;
   position: relative;
-  padding: 120px 0px 120px 0px;
+  padding: 300px 0px 300px 0px;
 }
 .cta .counter-icon i {
   font-size: 40px;
