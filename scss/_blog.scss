@@ -139,6 +139,8 @@
         }
     }
     .blog-brand {
+        display: flex;
+        flex-direction: column;
         li {
             a {
                 color: $primary !important;
