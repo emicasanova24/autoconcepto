@@ -105,7 +105,7 @@
         transition: color 0.3s ease-in-out;
       }
     }
-
+    &:hover,
     &.active {
       color: #d9534f; // Color del texto cuando está activo
 

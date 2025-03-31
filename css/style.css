@@ -570,10 +570,10 @@ button:focus {
   color: #666;
   transition: color 0.3s ease-in-out;
 }
-.nav-item .nav-link.active {
+.nav-item .nav-link:hover, .nav-item .nav-link.active {
   color: #d9534f;
 }
-.nav-item .nav-link.active .interior-services-icon .icon-services {
+.nav-item .nav-link:hover .interior-services-icon .icon-services, .nav-item .nav-link.active .interior-services-icon .icon-services {
   filter: invert(1); /* Invierte colores (blanco a negro, negro a blanco) */
 }
 
