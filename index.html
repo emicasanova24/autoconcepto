@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
     <!-- Awesome icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="71">
@@ -164,7 +164,7 @@
 
                 <div class="col-lg-6">
                     <div class="interior-about-img">
-                        <img src="images/background/bg-10.jpg" class="img-fluid" alt="">
+                        <img src="images/quienes-somos.jpeg" class="img-fluid" alt="">
                     </div>
                 </div>
 
@@ -189,6 +189,56 @@
             });
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const h5Elements = document.querySelectorAll('#pills-tab .nav-link h5');
+            h5Elements.forEach(h5 => {
+                h5.addEventListener('click', function (e) {
+                    e.stopPropagation(); // evita que el clic llegue al <a>
+                });
+            });
+        });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const navbarCollapse = document.getElementById('navbarCollapse');
+                const navbarToggler = document.querySelector('.navbar-toggler');
+                const navLinks = document.querySelectorAll('#pills-tab .nav-link');
+            
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        // Solo si la navbar está visible (modo mobile)
+                        const isMobile = window.getComputedStyle(navbarToggler).display !== 'none';
+                        const isNavbarOpen = navbarCollapse.classList.contains('show');
+            
+                        if (isMobile && isNavbarOpen) {
+                            // Esto fuerza el cierre manualmente sin que se dispare el toggle
+                            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                            if (bsCollapse) {
+                                bsCollapse.hide();
+                            } else {
+                                new bootstrap.Collapse(navbarCollapse, {
+                                    toggle: false
+                                }).hide();
+                            }
+                        }
+            
+                        // Evita que el clic se interprete como toggle
+                        e.stopPropagation();
+                    });
+                });
+            
+                // Este fix evita que el foco o algún "ghost click" active el toggle
+                navbarToggler.addEventListener('focus', (e) => {
+                    // Si se enfocó sin click real (desde tab o JS), lo ignora
+                    if (!e.pointerType || e.pointerType === '') {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                });
+            });
+            </script>
+            
     <!-- START SERVICES -->
     <section class="section interior-services" id="services">
         <div class="container">
@@ -375,11 +425,7 @@
 
                         <div class="interior-blog-content">
 
-                            <div class="date">
-                                <span class="f-14">10</span>
-                                <br>
-                                <span class="text-uppercase f-12">Sep</span>
-                            </div>
+
 
                             <div class="blog-info mt-3">
                                 <h6 class="f-22">Carrocería</h6>
@@ -421,11 +467,6 @@
                             <img src="images/blog/blog-1.png" class="img-fluid" alt="">
                         </div>
                         <div class="interior-blog-content">
-                            <div class="date">
-                                <span class="f-14">10</span>
-                                <br>
-                                <span class="text-uppercase f-12">Sep</span>
-                            </div>
                             <div class="blog-info mt-3">
                                 <h6 class="f-22">Pintura</h6>
                                 <ul class="list-inline blog-brand w-100">
@@ -556,6 +597,114 @@
                     <div class="gallary-box m-3 portfolio">
                         <a class="lightbox port" href="images/services/pintura/6.jpeg" title="">
                             <img class="gallary-container" src="images/services/pintura/6.jpeg" alt="Architecture" />
+                            <div class="item-effect">
+                                <div class="item-caption text-center bg-primary text-white p-3">
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Chapa y Pintura</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 picture-item" data-groups='["web"]'>
+                    <div class="gallary-box m-3 portfolio">
+                        <a class="lightbox port" href="images/services/pintura/7.jpeg" title="">
+                            <img class="gallary-container" src="images/services/pintura/7.jpeg" alt="Architecture" />
+                            <div class="item-effect">
+                                <div class="item-caption text-center bg-primary text-white p-3">
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Chapa y Pintura</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 picture-item" data-groups='["web"]'>
+                    <div class="gallary-box m-3 portfolio">
+                        <a class="lightbox port" href="images/services/pintura/8.jpeg" title="">
+                            <img class="gallary-container" src="images/services/pintura/8.jpeg" alt="Architecture" />
+                            <div class="item-effect">
+                                <div class="item-caption text-center bg-primary text-white p-3">
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Chapa y Pintura</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 picture-item" data-groups='["web"]'>
+                    <div class="gallary-box m-3 portfolio">
+                        <a class="lightbox port" href="images/services/pintura/9.jpeg" title="">
+                            <img class="gallary-container" src="images/services/pintura/9.jpeg" alt="Architecture" />
+                            <div class="item-effect">
+                                <div class="item-caption text-center bg-primary text-white p-3">
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Chapa y Pintura</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 picture-item" data-groups='["web"]'>
+                    <div class="gallary-box m-3 portfolio">
+                        <a class="lightbox port" href="images/services/pintura/10.jpeg" title="">
+                            <img class="gallary-container" src="images/services/pintura/10.jpeg" alt="Architecture" />
+                            <div class="item-effect">
+                                <div class="item-caption text-center bg-primary text-white p-3">
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Chapa y Pintura</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 picture-item" data-groups='["web"]'>
+                    <div class="gallary-box m-3 portfolio">
+                        <a class="lightbox port" href="images/services/pintura/11.jpeg" title="">
+                            <img class="gallary-container" src="images/services/pintura/11.jpeg" alt="Architecture" />
+                            <div class="item-effect">
+                                <div class="item-caption text-center bg-primary text-white p-3">
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Chapa y Pintura</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 picture-item" data-groups='["web"]'>
+                    <div class="gallary-box m-3 portfolio">
+                        <a class="lightbox port" href="images/services/pintura/12.jpeg" title="">
+                            <img class="gallary-container" src="images/services/pintura/12.jpeg" alt="Architecture" />
+                            <div class="item-effect">
+                                <div class="item-caption text-center bg-primary text-white p-3">
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Chapa y Pintura</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 picture-item" data-groups='["web"]'>
+                    <div class="gallary-box m-3 portfolio">
+                        <a class="lightbox port" href="images/services/pintura/13.jpeg" title="">
+                            <img class="gallary-container" src="images/services/pintura/13.jpeg" alt="Architecture" />
+                            <div class="item-effect">
+                                <div class="item-caption text-center bg-primary text-white p-3">
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Chapa y Pintura</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 picture-item" data-groups='["web"]'>
+                    <div class="gallary-box m-3 portfolio">
+                        <a class="lightbox port" href="images/services/pintura/14.jpeg" title="">
+                            <img class="gallary-container" src="images/services/pintura/14.jpeg" alt="Architecture" />
+                            <div class="item-effect">
+                                <div class="item-caption text-center bg-primary text-white p-3">
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Chapa y Pintura</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 picture-item" data-groups='["web"]'>
+                    <div class="gallary-box m-3 portfolio">
+                        <a class="lightbox port" href="images/services/pintura/15.jpeg" title="">
+                            <img class="gallary-container" src="images/services/pintura/15.jpeg" alt="Architecture" />
                             <div class="item-effect">
                                 <div class="item-caption text-center bg-primary text-white p-3">
                                     <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Chapa y Pintura</h5>
@@ -732,8 +881,8 @@
                 </div>
                 <div class="col-lg-4 picture-item" data-groups='["html"]'>
                     <div class="gallary-box m-3 portfolio">
-                        <a class="lightbox port" href="images/services/siniestros/4.jpeg" title="">
-                            <img class="gallary-container" src="images/services/siniestros/4.jpeg" alt="Painting" />
+                        <a class="lightbox port" href="images/services/siniestros/4.jpg" title="">
+                            <img class="gallary-container" src="images/services/siniestros/4.jpg" alt="Painting" />
                             <div class="item-effect">
                                 <div class="item-caption text-center bg-primary text-white p-3">
                                     <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Servicio integral en siniestros</h5>
@@ -744,8 +893,8 @@
                 </div>
                 <div class="col-lg-4 picture-item" data-groups='["html"]'>
                     <div class="gallary-box m-3 portfolio">
-                        <a class="lightbox port" href="images/services/siniestros/5.jpeg" title="">
-                            <img class="gallary-container" src="images/services/siniestros/5.jpeg" alt="Painting" />
+                        <a class="lightbox port" href="images/services/siniestros/5.jpg" title="">
+                            <img class="gallary-container" src="images/services/siniestros/5.jpg" alt="Painting" />
                             <div class="item-effect">
                                 <div class="item-caption text-center bg-primary text-white p-3">
                                     <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Servicio integral en siniestros</h5>
@@ -756,8 +905,80 @@
                 </div>
                 <div class="col-lg-4 picture-item" data-groups='["html"]'>
                     <div class="gallary-box m-3 portfolio">
-                        <a class="lightbox port" href="images/services/siniestros/6.jpeg" title="">
-                            <img class="gallary-container" src="images/services/siniestros/6.jpeg" alt="Painting" />
+                        <a class="lightbox port" href="images/services/siniestros/6.jpg" title="">
+                            <img class="gallary-container" src="images/services/siniestros/6.jpg" alt="Painting" />
+                            <div class="item-effect">
+                                <div class="item-caption text-center bg-primary text-white p-3">
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Servicio integral en siniestros</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 picture-item" data-groups='["html"]'>
+                    <div class="gallary-box m-3 portfolio">
+                        <a class="lightbox port" href="images/services/siniestros/10.jpeg" title="">
+                            <img class="gallary-container" src="images/services/siniestros/10.jpeg" alt="Painting" />
+                            <div class="item-effect">
+                                <div class="item-caption text-center bg-primary text-white p-3">
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Servicio integral en siniestros</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 picture-item" data-groups='["html"]'>
+                    <div class="gallary-box m-3 portfolio">
+                        <a class="lightbox port" href="images/services/siniestros/11.jpeg" title="">
+                            <img class="gallary-container" src="images/services/siniestros/11.jpeg" alt="Painting" />
+                            <div class="item-effect">
+                                <div class="item-caption text-center bg-primary text-white p-3">
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Servicio integral en siniestros</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 picture-item" data-groups='["html"]'>
+                    <div class="gallary-box m-3 portfolio">
+                        <a class="lightbox port" href="images/services/siniestros/12.jpeg" title="">
+                            <img class="gallary-container" src="images/services/siniestros/12.jpeg" alt="Painting" />
+                            <div class="item-effect">
+                                <div class="item-caption text-center bg-primary text-white p-3">
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Servicio integral en siniestros</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 picture-item" data-groups='["html"]'>
+                    <div class="gallary-box m-3 portfolio">
+                        <a class="lightbox port" href="images/services/siniestros/7.jpeg" title="">
+                            <img class="gallary-container" src="images/services/siniestros/7.jpeg" alt="Painting" />
+                            <div class="item-effect">
+                                <div class="item-caption text-center bg-primary text-white p-3">
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Servicio integral en siniestros</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 picture-item" data-groups='["html"]'>
+                    <div class="gallary-box m-3 portfolio">
+                        <a class="lightbox port" href="images/services/siniestros/8.jpeg" title="">
+                            <img class="gallary-container" src="images/services/siniestros/8.jpeg" alt="Painting" />
+                            <div class="item-effect">
+                                <div class="item-caption text-center bg-primary text-white p-3">
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Servicio integral en siniestros</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 picture-item" data-groups='["html"]'>
+                    <div class="gallary-box m-3 portfolio">
+                        <a class="lightbox port" href="images/services/siniestros/9.jpeg" title="">
+                            <img class="gallary-container" src="images/services/siniestros/9.jpeg" alt="Painting" />
                             <div class="item-effect">
                                 <div class="item-caption text-center bg-primary text-white p-3">
                                     <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Servicio integral en siniestros</h5>
@@ -1245,50 +1466,53 @@
     <footer class="section agency-footer pb-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div>
-                        <h6 class="footer-heading text-uppercase fw-bold f-13">Information</h6>
+                        <h6 class="footer-heading text-uppercase fw-bold f-13">Secciones</h6>
                         <ul class="list-unstyled footer-link mt-3 mb-0">
-                            <li><a href="javascript:void(0)">Pages</a></li>
-                            <li><a href="javascript:void(0)">Our Team</a></li>
-                            <li><a href="javascript:void(0)">Feuchers</a></li>
-                            <li><a href="javascript:void(0)">Pricing</a></li>
+                            <li><a href="#home">Inicio</a></li>
+                            <li><a href="#about">Nosotros</a></li>
+                            <li><a href="#services">Servicios</a></li>
+                            <li><a href="#work">Trabajos</a></li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div>
-                        <h6 class="footer-heading text-uppercase fw-bold f-13">Help</h6>
+                        <h6 class="footer-heading text-uppercase fw-bold f-13">Secciones</h6>
                         <ul class="list-unstyled footer-link mt-3 mb-0">
-                            <li><a href="javascript:void(0)">Sign Up </a></li>
-                            <li><a href="javascript:void(0)">Login</a></li>
-                            <li><a href="javascript:void(0)">Terms of Services</a></li>
-                            <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                            <li><a href="#contact">Contacto</a></li>
+                            <li><a href="#client">Recomendaciones</a></li>
+                            <li><a href="#team">Seguros</a></li>
+                            <li><a href="#blog">Cursos Hangar</a></li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+            
+                <div class="col-lg-4">
                     <div>
-                        <h6 class="footer-heading text-uppercase fw-bold f-13">Resources</h6>
-                        <ul class="list-unstyled footer-link mt-3 mb-0">
-                            <li><a href="javascript:void(0)">Monitoring Grader </a></li>
-                            <li><a href="javascript:void(0)">Video Tutorial</a></li>
-                            <li><a href="javascript:void(0)">Term &amp; Service</a></li>
-                            <li><a href="javascript:void(0)">Tulsy API</a></li>
-                        </ul>
+                        <h6 class="footer-heading text-uppercase fw-bold f-13">Redes Autoconcepto</h6>
+                        <div class="redes-sociales">
+                            <a href="https://www.instagram.com/tallerautoconcepto/" target="_blank" aria-label="Instagram Autoconcepto">
+                              <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/541168540116?text=Hola,%20quiero%20más%20información" target="_blank" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                        <h6 class="footer-heading mt-3 text-uppercase fw-bold f-13">Redes Hangar</h6>
+                        <div class="redes-sociales">
+                            <a href="https://www.instagram.com/hangarautosok/" target="_blank" aria-label="Instagram Hangar">
+                              <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/5491125521921?text=Hola,%20quiero%20más%20información" target="_blank" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-lg-3">
-                    <div>
-                        <h6 class="footer-heading text-uppercase fw-bold f-13">Subscribe Now</h6>
-                        <p class="subscribe-desc mt-4 mb-0">Tempora on dolore theet magnam aliquam quaerat voluptatem.</p>
-                        
-                    </div>
-                </div>
-
             </div>
 
             <div class="row mt-5">

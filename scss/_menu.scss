@@ -134,3 +134,21 @@
 #galleryWrapper.expanded {
   max-height: none;
 }
+
+
+
+.redes-sociales {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.redes-sociales a {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.redes-sociales a:hover {
+  color: #007bff; /* o el color que prefieras */
+}
