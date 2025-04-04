@@ -114,36 +114,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="carousel-item" style="background-image:url('images/background/hangar.png');">
-                            <div class="home-center">
-                                <div class="home-desc-center">
-                                    <div class="bg-overlay"></div>
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-                                            <div class="col-lg-8">
-                                                <div class="interior-home-content text-center text-white">
-                                                    <img src="/images/logo-blanco.png" alt="Hangar" height="300" >
-                                                    <h4 class="interior-home-title mt-4 mb-5 fst-italic letter-spacing_6">
-                                                        Cursos de Chapa y Pintura en Hangar</h4>
-                                                        <div class="mt-4 pt-3 d-flex justify-content-center align-items-center d-md-block">
-                                                        <button class="btn btn-warning btn-md btn-custom me-md-2" type="button">Ver cursos</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only"></span>
-                    </a> -->
                 </div>
             </div>
         </div>
@@ -199,6 +170,21 @@
     <!-- END ABOUT -->
     <hr>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let serviceTabs = document.querySelectorAll('.nav-tabs .nav-link');
+            let navbar = document.getElementById('navbarCollapse');
+
+            serviceTabs.forEach(tab => {
+                tab.addEventListener('click', function (event) {
+                    if (navbar.classList.contains('show')) {
+                        event.preventDefault();
+                        event.stopImmediatePropagation();
+                    }
+                });
+            });
+        });
+    </script>
     <!-- START SERVICES -->
     <section class="section interior-services" id="services">
         <div class="container">
@@ -351,12 +337,123 @@
         <div class="container">
             <div class="row" id="counter">
                 <div class="col-lg-12 d-flex justify-content-center">
-                    <img src="./images/logo-blanco.svg" alt="" width="350" height="auto">
+                    <img src="./images/logo-blanco.png" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
     </section>
     <!-- END COUNTER -->
+
+    <hr>
+
+    <!-- START BLOG -->
+    <section class="section interior-blog" id="blog">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <h2 class="heading-title-title letter-spacing_4 text-uppercase">CURSOS HANGAR</h2>
+                        <p class="heading-title-desc text-muted mt-4">En Hangar , ofrecemos capacitaciones en chapa y pintura dirigidas a todas aquellas personas apasionadas por los autos, ya sea como hobby o con el objetivo de iniciarse en este oficio. También están diseñadas para quienes ya trabajan en un taller y desean perfeccionar sus conocimientos.
+                            </p>
+                        <p class="heading-title-desc text-muted mt-4">
+                            Además, nuestras formaciones son ideales para compañías de seguros que buscan capacitar a su personal, así como para estudios, peritos, brokers, concesionarias, tramitadores y asesores de seguros, brindándoles una comprensión más profunda de los procesos de reparación vehicular.
+                            </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-3 justify-content-center">
+                <div class="col-12 col-lg-6">
+                    <div class="interior-blog-box mt-4">
+                        <div class="interior-blog-img">
+                            <img src="images/blog/blog-1.jpg" class="img-fluid" alt="">
+                        </div>
+
+                        <div class="interior-blog-content">
+
+                            <div class="date">
+                                <span class="f-14">10</span>
+                                <br>
+                                <span class="text-uppercase f-12">Sep</span>
+                            </div>
+
+                            <div class="blog-info mt-3">
+                                <h6 class="f-22">Carrocería</h6>
+                                <ul class="list-inline blog-brand">
+                                    <li class="list-inline-item f-15">
+                                        <b>Seguridad y salud laboral:</b> Normas y protocolos en el área.
+                                    </li>
+                                    <li class="list-inline-item f-15 mt-2">
+                                        <b>Diseño, fabricación y materiales:</b> Normas y protocolos en el área. Características constructivas, ensayos y tratamientos de los materiales utilizados.
+                                    </li>
+                                    <li class="list-inline-item f-15 mt-2">
+                                        <b>Sistemas de seguridad:</b> Pasiva, activa, preventiva y sistemas de ayuda a la conducción.
+                                    </li>
+                                    <li class="list-inline-item f-15 mt-2">
+                                        <b>Técnicas y herramientas de reparación:</b> Análisis de impactos, uso de equipo de enderezado, bancadas, sistemas de medición y diagnóstico de daños estructurales.
+                                    </li>
+                                    <li class="list-inline-item f-15 mt-2">
+                                        <b>Prácticas de reparación segura: </b> Sustitución de piezas (larguero, parante central, piezas fijas y móviles), corrección de holguras y soldaduras (MIG/MAG, TIG, soldadora de punto).
+                                    </li>
+                                    <li class="list-inline-item f-15 mt-2">
+                                        <b>Reparación de plásticos:</b> Clasificación, herramientas, insumos, tratamientos de deformaciones y técnicas de soldado químico.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-4">
+                                <a href="https://wa.me/541168540116?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20curso%20de%20Carrocería" class="btn btn-sm btn-dark-custom border-hrz">
+                                    <span class="border-vrt">QUIERO ESTE CURSO</span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 d-flex flex-column">
+                    <div class="interior-blog-box mt-4">
+                        <div class="interior-blog-img">
+                            <img src="images/blog/blog-1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="interior-blog-content">
+                            <div class="date">
+                                <span class="f-14">10</span>
+                                <br>
+                                <span class="text-uppercase f-12">Sep</span>
+                            </div>
+                            <div class="blog-info mt-3">
+                                <h6 class="f-22">Pintura</h6>
+                                <ul class="list-inline blog-brand">
+                                    <li class="list-inline-item f-15">
+                                        <b>Seguridad y equipamiento:</b> Normas laborales, uso de pistolas, sopletes y abrasivos.
+                                    </li>
+                                    <li class="list-inline-item f-15 mt-2">
+                                        <b>Preparación y tratamientos:</b> Corrosión, tratamientos anticorrosivos, enmascarado, preparación de superficies y aplicación de imprimaciones, tintables y color base.
+                                    </li>
+                                    <li class="list-inline-item f-15 mt-2">
+                                        <b>Procesos de pintado:</b> Técnicas de reparación, control de calidad, difuminado, personalización, y aplicación de aerosoles, pinturas de alto contenido sólido y tecnología H.V.L.P.
+                                    </li>
+                                    <li class="list-inline-item f-15 mt-2">
+                                        <b>Prácticas de aplicación:</b> Técnicas de difuminado y pintado en plásticos, barniz 2K y pinturas a base de agua, además de nociones básicas de colorimetría.
+                                    </li>
+                                    <li class="list-inline-item f-15 mt-2">
+                                        <b>Terminación y Detailing:</b> Uso de descontaminantes, abrasivos, pastas y tratamientos para evaluar y corregir el estado final del vehículo (clear y terminaciones).
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="https://wa.me/541168540116?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20curso%20de%20Pintura" class="btn btn-sm btn-dark-custom border-hrz">
+                            <span class="border-vrt">QUIERO ESTE CURSO</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END BLOG -->
 
     <hr>
 
@@ -376,10 +473,10 @@
                         <div class="filters-group">
                             <ul class="nav filter-options list-unstyled list-inline justify-content-center">
                                 <li data-group="all" class="active nav-link list-inline-item mt-2" style="cursor: pointer;">Todo</li>
-                                <li data-group="web" class="nav-link list-inline-item mt-2" style="cursor: pointer;">Architecture</li>
-                                <li data-group="desktop" class="nav-link list-inline-item mt-2" style="cursor: pointer;">Builder</li>
-                                <li data-group="php" class="nav-link list-inline-item mt-2" style="cursor: pointer;">Electric</li>
-                                <li data-group="html" class="nav-link list-inline-item mt-2" style="cursor: pointer;">Painting</li>
+                                <li data-group="web" class="nav-link list-inline-item mt-2" style="cursor: pointer;">Chapa y Pintura</li>
+                                <li data-group="desktop" class="nav-link list-inline-item mt-2" style="cursor: pointer;">Restauraciones</li>
+                                <li data-group="php" class="nav-link list-inline-item mt-2" style="cursor: pointer;">Lustrado, pulido y tratamiento de pintura</li>
+                                <li data-group="html" class="nav-link list-inline-item mt-2" style="cursor: pointer;">Servicio integral en siniestros</li>
                             </ul>
                         </div>
                     </div>
@@ -388,54 +485,67 @@
         </div>
         <div class="container mt-5">
             <div class="row g-0" id="grid">
+                
+                <!-- CHAPA Y PINTURA -->
                 <div class="col-lg-4 picture-item" data-groups='["web"]'>
                     <div class="gallary-box m-3 portfolio">
                         <a class="lightbox port" href="images/works/work-1.jpg" title="">
                             <img class="gallary-container" src="images/works/work-1.jpg" alt="Architecture" />
                             <div class="item-effect">
                                 <div class="item-caption text-center bg-primary text-white p-3">
-                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Architecture</h5>
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Chapa y Pintura</h5>
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
+                <!-- FIN CHAPA Y PINTURA -->
+
+                <!-- RESTAURACIONES -->
                 <div class="col-lg-4 picture-item" data-groups='["desktop"]'>
                     <div class="gallary-box m-3 portfolio">
                         <a class="lightbox port" href="images/works/work-2.jpg" title="">
                             <img class="gallary-container" src="images/works/work-2.jpg" alt="Builder" />
                             <div class="item-effect">
                                 <div class="item-caption text-center bg-primary text-white p-3">
-                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Builder</h5>
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Restauraciones</h5>
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
+                <!-- FIN RESTAURACIONES -->
+
+
+                <!-- LUSTRADO, PULIDO Y TRATAMIENTO DE PINTURA -->
                 <div class="col-lg-4 picture-item" data-groups='["php"]'>
                     <div class="gallary-box m-3 portfolio">
                         <a class="lightbox port" href="images/works/work-3.jpg" title="">
                             <img class="gallary-container" src="images/works/work-3.jpg" alt="Electric" />
                             <div class="item-effect">
                                 <div class="item-caption text-center bg-primary text-white p-3">
-                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Electric</h5>
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Lustrado, pulido y tratamiento de pintura</h5>
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
+                <!-- FIN LUSTRADO, PULIDO Y TRATAMIENTO DE PINTURA -->
+
+                <!--  SERVICIO INTEGRAL EN SINISTROS -->
                 <div class="col-lg-4 picture-item" data-groups='["html"]'>
                     <div class="gallary-box m-3 portfolio">
                         <a class="lightbox port" href="images/works/work-4.jpg" title="">
                             <img class="gallary-container" src="images/works/work-4.jpg" alt="Painting" />
                             <div class="item-effect">
                                 <div class="item-caption text-center bg-primary text-white p-3">
-                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Painting</h5>
+                                    <h5 class="f-14 letter-spacing_2 text-uppercase mb-0">Servicio integral en siniestros</h5>
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
+                <!--  SERVICIO INTEGRAL EN SINISTROS -->
             </div>
         </div>
     </section>
@@ -612,116 +722,6 @@
     <hr>
 
 
-    <!-- START BLOG -->
-    <section class="section interior-blog" id="blog">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="text-center">
-                        <h2 class="heading-title-title letter-spacing_4 text-uppercase">CURSOS HANGAR</h2>
-                        <p class="heading-title-desc text-muted mt-4">En Hangar , ofrecemos capacitaciones en chapa y pintura dirigidas a todas aquellas personas apasionadas por los autos, ya sea como hobby o con el objetivo de iniciarse en este oficio. También están diseñadas para quienes ya trabajan en un taller y desean perfeccionar sus conocimientos.
-                            </p>
-                        <p class="heading-title-desc text-muted mt-4">
-                            Además, nuestras formaciones son ideales para compañías de seguros que buscan capacitar a su personal, así como para estudios, peritos, brokers, concesionarias, tramitadores y asesores de seguros, brindándoles una comprensión más profunda de los procesos de reparación vehicular.
-                            </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt-5 pt-3 justify-content-center">
-                <div class="col-12 col-lg-6">
-                    <div class="interior-blog-box mt-4">
-                        <div class="interior-blog-img">
-                            <img src="images/blog/blog-1.jpg" class="img-fluid" alt="">
-                        </div>
-
-                        <div class="interior-blog-content">
-
-                            <div class="date">
-                                <span class="f-14">10</span>
-                                <br>
-                                <span class="text-uppercase f-12">Sep</span>
-                            </div>
-
-                            <div class="blog-info mt-3">
-                                <h6 class="f-22">Carrocería</h6>
-                                <ul class="list-inline blog-brand">
-                                    <li class="list-inline-item f-15">
-                                        <b>Seguridad y salud laboral:</b> Normas y protocolos en el área.
-                                    </li>
-                                    <li class="list-inline-item f-15 mt-2">
-                                        <b>Diseño, fabricación y materiales:</b> Normas y protocolos en el área. Características constructivas, ensayos y tratamientos de los materiales utilizados.
-                                    </li>
-                                    <li class="list-inline-item f-15 mt-2">
-                                        <b>Sistemas de seguridad:</b> Pasiva, activa, preventiva y sistemas de ayuda a la conducción.
-                                    </li>
-                                    <li class="list-inline-item f-15 mt-2">
-                                        <b>Técnicas y herramientas de reparación:</b> Análisis de impactos, uso de equipo de enderezado, bancadas, sistemas de medición y diagnóstico de daños estructurales.
-                                    </li>
-                                    <li class="list-inline-item f-15 mt-2">
-                                        <b>Prácticas de reparación segura: </b> Sustitución de piezas (larguero, parante central, piezas fijas y móviles), corrección de holguras y soldaduras (MIG/MAG, TIG, soldadora de punto).
-                                    </li>
-                                    <li class="list-inline-item f-15 mt-2">
-                                        <b>Reparación de plásticos:</b> Clasificación, herramientas, insumos, tratamientos de deformaciones y técnicas de soldado químico.
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="mt-4">
-                                <a href="https://wa.me/541168540116?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20curso%20de%20Carrocería" class="btn btn-sm btn-dark-custom border-hrz">
-                                    <span class="border-vrt">QUIERO ESTE CURSO</span>
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-6 d-flex flex-column">
-                    <div class="interior-blog-box mt-4">
-                        <div class="interior-blog-img">
-                            <img src="images/blog/blog-1.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="interior-blog-content">
-                            <div class="date">
-                                <span class="f-14">10</span>
-                                <br>
-                                <span class="text-uppercase f-12">Sep</span>
-                            </div>
-                            <div class="blog-info mt-3">
-                                <h6 class="f-22">Pintura</h6>
-                                <ul class="list-inline blog-brand">
-                                    <li class="list-inline-item f-15">
-                                        <b>Seguridad y equipamiento:</b> Normas laborales, uso de pistolas, sopletes y abrasivos.
-                                    </li>
-                                    <li class="list-inline-item f-15 mt-2">
-                                        <b>Preparación y tratamientos:</b> Corrosión, tratamientos anticorrosivos, enmascarado, preparación de superficies y aplicación de imprimaciones, tintables y color base.
-                                    </li>
-                                    <li class="list-inline-item f-15 mt-2">
-                                        <b>Procesos de pintado:</b> Técnicas de reparación, control de calidad, difuminado, personalización, y aplicación de aerosoles, pinturas de alto contenido sólido y tecnología H.V.L.P.
-                                    </li>
-                                    <li class="list-inline-item f-15 mt-2">
-                                        <b>Prácticas de aplicación:</b> Técnicas de difuminado y pintado en plásticos, barniz 2K y pinturas a base de agua, además de nociones básicas de colorimetría.
-                                    </li>
-                                    <li class="list-inline-item f-15 mt-2">
-                                        <b>Terminación y Detailing:</b> Uso de descontaminantes, abrasivos, pastas y tratamientos para evaluar y corregir el estado final del vehículo (clear y terminaciones).
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-auto">
-                        <a href="https://wa.me/541168540116?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20curso%20de%20Pintura" class="btn btn-sm btn-dark-custom border-hrz">
-                            <span class="border-vrt">QUIERO ESTE CURSO</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END BLOG -->
-
-    <hr>
 
     <!-- START CONTACT -->
     <section class="section agency-contact" id="contact">
